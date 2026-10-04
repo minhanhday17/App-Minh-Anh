@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="theme-color" content="#050506">
+<title>MINH ANH UI</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="particles"></div>
+
+<div class="app" id="mainApp">
+
+  <header class="topbar">
+    <div class="brand">
+      <img class="logo" src="avata.png" alt="MINH ANH">
+      <div>
+        <h1>Minh Anh</h1>
+        <p>Mobile Optimizer · <span>CONNECTED</span></p>
+      </div>
+    </div>
+    <div class="online">
+      <span class="dot"></span>
+      ONLINE
+    </div>
+  </header>
+
+  <main class="content">
+
+    <section class="welcome">
+      <h2>XIN CHÀO <span>Quý Khách</span></h2>
+      <div class="user-info" id="userInfo">
+        <span id="userKeyLabel">KEY: --</span>
+        <span id="userExpireLabel">HẠN: --</span>
+      </div>
+      <div class="countdown" id="countdownBox">
+        <span class="cd-label">CÒN LẠI</span>
+        <span class="cd-time" id="countdownText">--:--:--</span>
+      </div>
+    </section>
+
+    <h3 class="section-title">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="18" height="18">
+        <rect x="7" y="7" width="10" height="10" rx="1.5"/>
+        <rect x="10" y="10" width="4" height="4" rx="0.5"/>
+        <line x1="9" y1="3" x2="9" y2="7"/>
+        <line x1="15" y1="3" x2="15" y2="7"/>
+        <line x1="9" y1="17" x2="9" y2="21"/>
+        <line x1="15" y1="17" x2="15" y2="21"/>
+        <line x1="3" y1="9" x2="7" y2="9"/>
+        <line x1="3" y1="15" x2="7" y2="15"/>
+        <line x1="17" y1="9" x2="21" y2="9"/>
+        <line x1="17" y1="15" x2="21" y2="15"/>
+      </svg>
+      MAIN MODULES
+    </h3>
+    <div class="modules" id="moduleList">
+
+      <div class="module" data-module="aimlock">
+        <div class="tap-layer"></div>
+        <div class="mod-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="9"/>
+            <circle cx="12" cy="12" r="4.5"/>
+            <circle cx="12" cy="12" r="1" fill="currentColor"/>
+          </svg>
+        </div>
+        <div class="mod-copy">
+          <div class="mod-name">AIM LOCK</div>
+          <div class="mod-desc">Khóa tâm bám mục tiêu tự động</div>
+        </div>
+        <label class="switch">
+          <!-- Dán base64 vào đây, nhiều code cách nhau bằng dấu phẩy, có thể thêm nhiều hơn càng tốt -->
+          <input type="checkbox" id="aimlock" data-toggle data-base64="CODE BASE64_1,CODE BASE64_2,CODE BASE64_3">
+          <i></i>
+        </label>
+      </div>
+
+      <div class="module" data-module="sensitivity">
+        <div class="tap-layer"></div>
+        <div class="mod-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 17 a9 9 0 0 1 16 0"/>
+            <circle cx="12" cy="17" r="1.6" fill="currentColor"/>
+            <line x1="12" y1="17" x2="16" y2="12"/>
+          </svg>
+        </div>
+        <div class="mod-copy">
+          <div class="mod-name">SENSITIVITY BOOSTER</div>
+          <div class="mod-desc">Tăng tốc phản hồi cảm ứng</div>
+        </div>
+        <label class="switch">
+          <!-- Dán base64 vào đây, nhiều code cách nhau bằng dấu phẩy, có thể thêm nhiều hơn càng tốt -->
+          <input type="checkbox" id="keotam" data-toggle data-base64="CODE BASE64_1,CODE BASE64_2,CODE BASE64_3">
+          <i></i>
+        </label>
+      </div>
+
+      <div class="module" data-module="screen">
+        <div class="tap-layer"></div>
+        <div class="mod-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="12" rx="2"/>
+            <line x1="8" y1="20" x2="16" y2="20"/>
+            <line x1="12" y1="16" x2="12" y2="20"/>
+          </svg>
+        </div>
+        <div class="mod-copy">
+          <div class="mod-name">SCREEN BOOSTER</div>
+          <div class="mod-desc">Tối ưu khung hình FPS</div>
+        </div>
+        <label class="switch">
+          <!-- Dán base64 vào đây, nhiều code cách nhau bằng dấu phẩy, có thể thêm nhiều hơn càng tốt -->
+          <input type="checkbox" id="fixlo" data-toggle data-base64="CODE BASE64_1,CODE BASE64_2,CODE BASE64_3">
+          <i></i>
+        </label>
+      </div>
+
+      <div class="module" data-module="anchor">
+        <div class="tap-layer"></div>
+        <div class="mod-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="5.5" r="2.3"/>
+            <line x1="12" y1="7.8" x2="12" y2="20"/>
+            <line x1="6" y1="12" x2="18" y2="12"/>
+            <path d="M4 15 a8 8 0 0 0 16 0"/>
+          </svg>
+        </div>
+        <div class="mod-copy">
+          <div class="mod-name">ANCHOR AIM</div>
+          <div class="mod-desc">Giữ cố định điểm ngắm</div>
+        </div>
+        <label class="switch">
+          <!-- Dán base64 vào đây, nhiều code cách nhau bằng dấu phẩy, có thể thêm nhiều hơn càng tốt -->
+          <input type="checkbox" id="giamrung" data-toggle data-base64="CODE BASE64_1,CODE BASE64_2,CODE BASE64_3">
+          <i></i>
+        </label>
+      </div>
+
+      <div class="module" data-module="feather">
+        <div class="tap-layer"></div>
+        <div class="mod-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20.2 3.8 c-5.5 0-9.5 3-11.5 8.5 -0.6 1.7-1 3.5-1 5.5"/>
+            <path d="M7.7 17.8 c5-1 8.5-4.5 9.5-9.5"/>
+            <path d="M7.7 17.8 4 21.5"/>
+            <path d="M9.5 15.5 7 13"/>
+          </svg>
+        </div>
+        <div class="mod-copy">
+          <div class="mod-name">FEATHER AIM</div>
+          <div class="mod-desc">Ngắm mượt không giật</div>
+        </div>
+        <label class="switch">
+          <!-- Dán base64 vào đây, nhiều code cách nhau bằng dấu phẩy, có thể thêm nhiều hơn càng tốt -->
+          <input type="checkbox" id="fixgiat" data-toggle data-base64="CODE BASE64_1,CODE BASE64_2,CODE BASE64_3">
+          <i></i>
+        </label>
+      </div>
+
+      <div class="module" data-module="dpi">
+        <div class="tap-layer"></div>
+        <div class="mod-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="6" width="18" height="12" rx="2"/>
+            <circle cx="8" cy="12" r="1.5"/>
+            <line x1="12" y1="10" x2="18" y2="10"/>
+            <line x1="12" y1="14" x2="16" y2="14"/>
+          </svg>
+        </div>
+        <div class="mod-copy">
+          <div class="mod-name">DPI CUSTOM</div>
+          <div class="mod-desc">Tùy chỉnh độ nhạy DPI</div>
+        </div>
+        <label class="switch">
+          <!-- Dán base64 vào đây, nhiều code cách nhau bằng dấu phẩy, có thể thêm nhiều hơn càng tốt -->
+          <input type="checkbox" id="dpi" data-toggle data-base64="CODE BASE64_1,CODE BASE64_2,CODE BASE64_3">
+          <i></i>
+        </label>
+      </div>
+
+    </div>
+
+    <!--
+      HƯỚNG DẪN THÊM CHỨC NĂNG MỚI
+
+      BƯỚC 1: Sao chép 1 toogle rỗng ở dưới rồi dán vào chỗ muốn thêm.
+      BƯỚC 2: Đổi tên thành chức năng mày muốn ( phần mod-name ).
+      BƯỚC 3: Vô lại file script.js, thêm tên toogle mà mày vừa tạo vào.
+
+      TOOGLE RỖNG MẪU ( COPY ĐOẠN NÀY ):
+
+      <div class="module" data-module="tên_chức_năng">
+        <div class="tap-layer"></div>
+        <div class="mod-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="9"/>
+          </svg>
+        </div>
+        <div class="mod-copy">
+          <div class="mod-name">TÊN CHỨC NĂNG</div>
+          <div class="mod-desc">Mô tả chức năng</div>
+        </div>
+        <label class="switch">
+          <input type="checkbox" id="tên_chức_năng" data-toggle data-base64="CODE BASE64_1,CODE BASE64_2,CODE BASE64_3">
+          <i></i>
+        </label>
+      </div>
+    -->
+
+    <section class="panel" id="panel-monitor">
+      <h3 class="section-title">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="18" height="18">
+          <polyline points="3 17 9 11 13 15 21 7"/>
+          <polyline points="15 7 21 7 21 13"/>
+        </svg>
+        MONITOR
+      </h3>
+      <div class="monitor-card">
+        <div class="metric"><span>CPU</span><b id="mCpu">--</b></div>
+        <div class="metric"><span>RAM</span><b id="mRam">--</b></div>
+        <div class="metric"><span>FPS</span><b id="mFps">--</b></div>
+        <div class="metric"><span>Ping</span><b id="mPing">--</b></div>
+      </div>
+    </section>
+
+    <section class="panel" id="panel-settings">
+      <h3 class="section-title">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="18" height="18">
+          <circle cx="12" cy="12" r="3"/>
+          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33h0a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51h0a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82v0a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+        </svg>
+        SETTINGS
+      </h3>
+      <div class="settings-card">
+        <div class="setting">
+          <div>
+            <b>Đăng xuất</b>
+            <small>Thoát khỏi tài khoản hiện tại</small>
+          </div>
+          <button type="button" id="logoutBtn" class="logout-btn">THOÁT</button>
+        </div>
+        <div class="setting contact-setting" id="zaloBtn">
+          <div class="contact-info">
+            <img src="zl.png" alt="Zalo" class="contact-icon">
+            <b>MINH ANH</b>
+          </div>
+          <span class="contact-arrow">›</span>
+        </div>
+      </div>
+
+      <h3 class="section-title" style="margin-top:22px">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="18" height="18">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+          <polyline points="14 2 14 8 20 8"/>
+          <line x1="8" y1="13" x2="16" y2="13"/>
+          <line x1="8" y1="17" x2="13" y2="17"/>
+        </svg>
+        LỊCH SỬ KEY
+      </h3>
+      <div class="log-card" id="logCard">
+        <div class="log-empty" id="logEmpty">Chưa có lịch sử đăng nhập</div>
+        <div class="log-list" id="logList"></div>
+        <button type="button" class="log-clear-btn" id="clearLogBtn">XÓA LỊCH SỬ</button>
+      </div>
+    </section>
+
+    <div class="apply-wrap">
+      <button type="button" class="apply-btn" id="applyBtn">
+        ÁP DỤNG PHIÊN BẢN
+      </button>
+    </div>
+
+  </main>
+
+  <nav class="bottom">
+    <button type="button" class="nav active" data-panel="home">
+      <span class="ni">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="22" height="22">
+          <line x1="4" y1="6" x2="20" y2="6"/>
+          <circle cx="9" cy="6" r="2" fill="currentColor"/>
+          <line x1="4" y1="12" x2="20" y2="12"/>
+          <circle cx="15" cy="12" r="2" fill="currentColor"/>
+          <line x1="4" y1="18" x2="20" y2="18"/>
+          <circle cx="9" cy="18" r="2" fill="currentColor"/>
+        </svg>
+      </span>
+      CHỨC NĂNG
+    </button>
+    <button type="button" class="nav" data-panel="monitor">
+      <span class="ni">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="22" height="22">
+          <polyline points="3 17 9 11 13 15 21 7"/>
+          <polyline points="15 7 21 7 21 13"/>
+        </svg>
+      </span>
+      GIÁM SÁT
+    </button>
+    <button type="button" class="nav" data-panel="settings">
+      <span class="ni">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="22" height="22">
+          <circle cx="12" cy="12" r="3"/>
+          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33h0a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51h0a1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82v0a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+        </svg>
+      </span>
+      THIẾT LẬP
+    </button>
+  </nav>
+
+</div>
+
+<div class="game-select" id="gameSelect">
+  <div class="game-select-box">
+    <h3 class="game-select-title">Vui lòng chọn phiên bản</h3>
+    <div class="game-select-options">
+
+      <button type="button" class="package-option" onclick="selectGame('freefire')">
+        <img class="pkg-icon" src="1.png" alt="Free Fire">
+        <div class="pkg-info">
+          <span class="pkg-name">Free Fire</span>
+          <small class="pkg-id">com.dts.freefireth</small>
+        </div>
+        <i class="pkg-check">✓</i>
+      </button>
+
+      <button type="button" class="package-option" onclick="selectGame('freefiremax')">
+        <img class="pkg-icon" src="2.png" alt="Free Fire MAX">
+        <div class="pkg-info">
+          <span class="pkg-name">Free Fire MAX</span>
+          <small class="pkg-id">com.dts.freefiremax</small>
+        </div>
+        <i class="pkg-check">✓</i>
+      </button>
+
+    </div>
+    <button type="button" class="game-select-cancel" onclick="closeGameSelect()">HỦY</button>
+  </div>
+</div>
+
+<div class="toast-error" id="toastError">
+  <span id="errorMessage">Vui lòng chọn ít nhất một chức năng!</span>
+</div>
+
+<div class="loading-overlay" id="loadingOverlay">
+  <div class="loading-content">
+    <div class="loading-spinner" id="loadingSpinner"></div>
+    <div class="loading-text" id="loadingText">ĐANG XỬ LÝ...</div>
+    <div class="loading-success" id="loadingSuccess">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="52" height="52">
+        <circle cx="12" cy="12" r="10"/>
+        <polyline points="8 12 11 15 16 9"/>
+      </svg>
+      <span>THÀNH CÔNG</span>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+
+<script src="security.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

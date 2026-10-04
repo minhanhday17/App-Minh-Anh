@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="theme-color" content="#050506">
+<title>ĐĂNG NHẬP · MINH ANH UI</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="particles"></div>
+
+<div class="login-screen" id="loginScreen">
+  <div class="login-box">
+    <div class="login-logo">
+      <img src="avata.png" alt="MINH ANH">
+    </div>
+    <h1 class="login-title">MINH ANH <span>UI</span></h1>
+    <p class="login-sub">Nhập key để truy cập hệ thống</p>
+
+    <div class="login-input-wrap">
+      <input type="text" id="loginKey" class="login-input" autocomplete="off" spellcheck="false">
+      <button type="button" class="login-clear" id="loginClear">✕</button>
+    </div>
+
+    <div class="login-error" id="loginError"></div>
+
+    <button type="button" class="login-btn" id="loginBtn">
+      ĐĂNG NHẬP
+    </button>
+
+    <div class="login-status" id="loginStatus">
+      <span class="dot"></span> HỆ THỐNG SẴN SÀNG
+    </div>
+  </div>
+</div>
+
+<div class="zalo-float" id="zaloFloat">
+  <div class="zalo-ring"></div>
+  <div class="zalo-ring zalo-ring-2"></div>
+  <img src="zl.png" alt="Zalo" class="zalo-icon">
+  <div class="zalo-tooltip" id="zaloTooltip">
+    <span class="zalo-tooltip-label">LIÊN HỆ ZALO</span>
+    <span class="zalo-tooltip-phone">0877 446 154</span>
+  </div>
+</div>
+
+
+<script src="security.js"></script>
+<script src="login.js"></script>
+</body>
+</html>
